@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/parent_view"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+
+  >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:text="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"/>
+
+
+    <com.wof.videoplayerpoc.fragment.CustomPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:surface_type="texture_view"
+        app:controller_layout_id="@layout/player_custom_control"
+
+        />
+
+
+    <ProgressBar
+
+        android:id="@+id/loading"
+
+        android:layout_width="70dp"
+
+        android:layout_height="70dp"
+
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>
